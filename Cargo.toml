@@ -1,0 +1,23 @@
+[package]
+name = "async-io-timeout"
+version = "0.1.0"
+edition = "2021"
+authors = ["Jovan Pavlovic"]
+description = "Timeout for async I/O"
+license = "MIT"
+keywords = ["timeout", "io", "async", "tokio"]
+categories = ["asynchronous"]
+homepage = "https://github.com/JPaja/async-io-timeout"
+repository = "https://github.com/JPaja/async-io-timeout"
+readme = "README.md"
+
+[features]
+default = []
+runtime-tokio = ["dep:tokio"]
+runtime-embassy = ["dep:embassy-time"]
+
+[dependencies]
+async-std = { version = "1.13.0", optional = true }
+embassy-time = { version = "0.3.2", optional = true }
+futures = "0.3.31"
+tokio = { version = "1.41.1", optional = true, features = ["time"] }
