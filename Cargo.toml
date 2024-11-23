@@ -12,12 +12,13 @@ repository = "https://github.com/JPaja/async-io-timeout"
 readme = "README.md"
 
 [features]
-default = []
+default = ["runtime-tokio"]
 runtime-tokio = ["dep:tokio"]
 runtime-embassy = ["dep:embassy-time"]
 
 [dependencies]
 async-std = { version = "1.13.0", optional = true }
+cfg-if = "1.0.0"
 embassy-time = { version = "0.3.2", optional = true }
-futures = "0.3.31"
+futures = "0.3.24"
 tokio = { version = "1.41.1", optional = true, features = ["time"] }
