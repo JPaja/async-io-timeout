@@ -12,7 +12,7 @@ repository = "https://github.com/JPaja/async-io-timeout"
 readme = "README.md"
 
 [features]
-default = ["runtime-tokio"]
+default = []
 runtime-tokio = ["dep:tokio"]
 runtime-embassy = ["dep:embassy-time"]
 
